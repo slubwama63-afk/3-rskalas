@@ -1,0 +1,84 @@
+:root {
+  --bg: #fffdf7;
+  --brand: #f97316;
+  --accent: #ec4899;
+  --txt: #1e293b;
+  --muted: #64748b;
+  --radius: 16px;
+  --shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--txt);
+  line-height: 1.6;
+}
+
+.container { width: min(900px, 92vw); margin: auto; }
+.stack { display: grid; gap: 1rem; }
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+
+header.hero {
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Balloons effect */
+header.hero::before, header.hero::after {
+  content: "🎈";
+  font-size: 5rem;
+  position: absolute;
+  animation: float 6s infinite ease-in-out;
+}
+header.hero::before { left: 10%; top: 20%; }
+header.hero::after { right: 15%; top: 30%; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+h1, h2 { margin: 0; }
+.lead { font-size: 1.2rem; }
+.sublead { font-size: 1rem; opacity: 0.9; }
+
+form input, form select, form button {
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid #e2e8f0;
+  font-size: 1rem;
+}
+form button {
+  background: var(--brand);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.3s;
+}
+form button:hover { background: var(--accent); }
+
+#guest-list {
+  padding: 1rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.photos input { margin-bottom: 1rem; }
+#gallery img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  color: var(--muted);
+}

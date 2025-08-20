@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-årskalas 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container stack">
+      <h1>🎈 Välkommen till födelsedagskalaset 🎈</h1>
+      <p class="lead">Vi firar <strong>3-årsdagen</strong> den <strong>3 december 2025</strong> – kom och var med på glädjen!</p>
+      <p class="sublead">Plats: Hos oss i Alvik – mer info i inbjudan.</p>
+    </div>
+  </header>
+
+  <main class="container stack">
+    <!-- RSVP -->
+    <section class="rsvp stack">
+      <h2>Kan du komma?</h2>
+      <form id="rsvp-form" class="stack">
+        <input type="text" id="name" placeholder="Ditt namn" required>
+        <select id="response" required>
+          <option value="">Välj svar</option>
+          <option value="Kommer">🎉 Ja, jag kommer!</option>
+          <option value="Kanske">🤔 Kanske</option>
+          <option value="Inte">😢 Nej tyvärr</option>
+        </select>
+        <button type="submit">Skicka svar</button>
+      </form>
+      <div id="guest-list" class="stack"></div>
+    </section>
+
+    <!-- Fotoalbum -->
+    <section class="photos stack">
+      <h2>📸 Bilder på födelsedagsbarnet</h2>
+      <input type="file" id="photo-input" accept="image/*">
+      <div id="gallery" class="grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>🎂 Ses på kalaset den 3/12-2025! 🎂</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
